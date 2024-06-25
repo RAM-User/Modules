@@ -3,6 +3,7 @@ package com.modules.stream;
 import com.modules.pojo.Person;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -12,7 +13,7 @@ import java.util.stream.Stream;
 public class SerialStream {
 
     // foreach map filter limit sorted
-    private final List<Person> PERSON_LIST = List.of(
+    private final List<Person> PERSON_LIST = Arrays.asList(
             new Person("Neo", 22, "male"),
             new Person("Stan", 11, "female"),
             new Person("Grace", 34, "female"),
@@ -51,7 +52,7 @@ public class SerialStream {
 
     @Test
     public void  sorting() {
-        List<Person> personList = List.of(
+        List<Person> personList = Arrays.asList(
                 new Person("Neo", 22, "male"),
                 new Person("Stan", 11, "female"),
                 new Person("Grace", 34, "female"),
