@@ -2,7 +2,9 @@ package com.modules.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
@@ -10,6 +12,7 @@ import java.util.Objects;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Person {
     //private Long id;
 
@@ -21,16 +24,4 @@ public class Person {
 
     private String sex;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return Objects.equals(name, person.name) && Objects.equals(age, person.age) && Objects.equals(sex, person.sex);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, age, sex);
-    }
 }

@@ -242,6 +242,7 @@
         <module>ThirdPartService</module>
         <module>JDK8Special</module>
         <module>Common</module>
+        <module>utils</module>
     </modules>
 
     <build>

@@ -3,6 +3,7 @@ package com.modules.JUC;
 import java.time.LocalDateTime;
 
 public class twoPhaseTermination {
+
     public static void main(String[] args) throws InterruptedException {
         phaseThread phaseThread = new phaseThread();
         phaseThread.start();
