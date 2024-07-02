@@ -11,4 +11,8 @@ public class Customer {
     private String name;
 
     private String email;
+
+    static {
+        System.out.println("Customer class static code trigger");
+    }
 }

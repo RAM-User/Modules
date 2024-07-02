@@ -10,5 +10,25 @@ import lombok.NoArgsConstructor;
 public class Address {
     private String street;
 
-    private String postCode;
+    public String postCode;
+
+    static {
+        System.out.println("Address class static code trigger");
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", postCode='" + postCode + '\'' +
+                '}';
+    }
+
+    public static String publicMethod() {
+        return "this is a public method";
+    }
+
+    private static String privateMethodWithParameter(String parameter) {
+        return "this is a private method with " + parameter;
+    }
 }

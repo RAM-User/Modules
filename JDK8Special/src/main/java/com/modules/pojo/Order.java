@@ -13,4 +13,8 @@ public class Order {
     private Customer customer;
 
     private Address address;
+
+    static {
+        System.out.println("Order class static code trigger");
+    }
 }
