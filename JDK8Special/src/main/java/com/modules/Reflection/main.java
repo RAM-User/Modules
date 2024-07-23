@@ -3,17 +3,16 @@ package com.modules.Reflection;
 import com.modules.pojo.Address;
 import com.modules.pojo.Customer;
 import com.modules.pojo.Order;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.Type;
+import java.lang.reflect.*;
 
 public class main {
-    public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException, ClassNotFoundException {
+    public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException {
 //        GetClass();
 //        GetFiled();
-          GetMethod();
+//          GetMethod();
+        GetConstructor();
     }
 
     public static void GetClass() {
@@ -64,5 +63,31 @@ public class main {
         Method privateMethodWithParameter = addressClass.getDeclaredMethod("privateMethodWithParameter", String.class);
         privateMethodWithParameter.setAccessible(true);
         System.out.println(privateMethodWithParameter.invoke(null, "parameter"));
+    }
+
+    public static void GetConstructor() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+        Class<?> addressClass = Class.forName("com.modules.pojo.Address");
+
+        Constructor<?> declaredConstructor = addressClass.getDeclaredConstructor(String.class, String.class);
+        Object object = declaredConstructor.newInstance("spear", "91405");
+//        if (object instanceof Address) {
+//            Address address = (Address) object;
+//        }
+//        addressClass.cast(object);
+
+        Field street = addressClass.getDeclaredField("street");
+        street.setAccessible(true);
+        System.out.println(street.get(object));
+
+        street.set(object, "spear2");
+        System.out.println(street.get(object));
+    }
+
+    public static void best() {
+        Address address = new Address("spear street", "91450");
+        Customer customer = new Customer("ink2r", "ink2r@gmail.com");
+        Order order = new Order(customer, address);
+
+        String postCode = order.getAddress().postCode;
     }
 }
