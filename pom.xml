@@ -54,12 +54,6 @@
     <dependencyManagement>
         <dependencies>
 
-            <dependency>
-                <groupId>e-iceblue</groupId>
-                <artifactId>spire.doc</artifactId>
-                <version>12.6.2</version>
-            </dependency>
-
             <!-- SpringBoot的依赖配置-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -248,7 +242,8 @@
         <module>ThirdPartService</module>
         <module>JDK8Special</module>
         <module>Common</module>
-        <module>utils</module>
+        <module>MySpringBoot</module>
+        <module>MySpringBoot</module>
     </modules>
 
     <build>

@@ -1,0 +1,24 @@
+spring:
+  main:
+    # 懒加载 建议关闭
+    lazy-initialization: false
+    # 启动日志
+    log-startup-info: true
+
+# 日志级别 debug error fatal info off trace warn
+logging:
+  level:
+    web: debug
+  file:
+    name: D:\Log\ModulesLog
+
+# 数据源配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    druid:
+      # 主库数据源
+      master:
+        url: jdbc:mysql://120.26.210.65:3306/2024Events?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        password: 111222..aa
