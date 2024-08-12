@@ -244,6 +244,7 @@
         <module>Common</module>
         <module>MySpringBoot</module>
         <module>MySpringBoot</module>
+        <module>ThinkingOfJava4th</module>
     </modules>
 
     <build>
