@@ -7,7 +7,7 @@ public class Person {
     }
 
     class Peeler {
-         public static Apple peel(Apple apple) {
+        public static Apple peel(Apple apple) {
             return apple;
         }
     }
