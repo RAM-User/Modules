@@ -28,7 +28,7 @@ public class Automobile {
             return a;
         }
 
-        public static void main(String[] args) {
+        public void main(String[] args) {
 //            Handler2 handler2 = new Handler2(new Automobile());
         }
     }
