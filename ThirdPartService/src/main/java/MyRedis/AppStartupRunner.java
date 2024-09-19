@@ -30,6 +30,8 @@ public class AppStartupRunner implements CommandLineRunner {
 
         RBlockingDeque<User> blockingDeque = redissonClient.getBlockingDeque("demoName");
         RDelayedQueue<User> delayedQueue = redissonClient.getDelayedQueue(blockingDeque);
+
+        // 单位
         delayedQueue.offer(user, 5, TimeUnit.SECONDS);
         //记录设置任务的时间
         System.out.println(user.getUserId() + "添加时间是：" + LocalDateTime.now());

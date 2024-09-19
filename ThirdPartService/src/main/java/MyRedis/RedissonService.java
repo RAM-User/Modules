@@ -19,6 +19,9 @@ public class RedissonService {
         RBlockingQueue<User> blockingFairQueue = redissonClient.getBlockingQueue("delay_queue_call");
         RDelayedQueue<User> delayedQueue = redissonClient.getDelayedQueue(blockingFairQueue);
         delayedQueue.offer(new User(), 5, TimeUnit.SECONDS);
+
+        // TODO 需求
+
         // 不要调用下面的方法,否者会导致消费不及时
 //        delayedQueue.destroy();
     }
