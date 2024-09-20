@@ -1,4 +1,4 @@
-package MyRedis;
+package MyRedisson;
 
 import Entity.User;
 import org.redisson.api.RBlockingQueue;
