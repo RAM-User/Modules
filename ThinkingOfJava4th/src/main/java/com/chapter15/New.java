@@ -1,5 +1,8 @@
 package com.chapter15;
 
+import com.Entity.chapter14.Candy;
+import com.Entity.chapter14.Circle;
+
 import java.util.*;
 
 public class New {
@@ -23,11 +26,15 @@ public class New {
         return new LinkedList<>();
     }
 
+    static void f(Map<Candy, List<Circle>> CandyCircle) {}
+
     public static void main(String[] args) {
         Map<String, List<String>> map = New.map();
         List<String> ls = New.list();
         Set<String> ss = New.set();
         Queue<String> qs = New.queue();
 
+        // 显式调用
+        f(New.<Candy, List<Circle>> map());
     }
 }
