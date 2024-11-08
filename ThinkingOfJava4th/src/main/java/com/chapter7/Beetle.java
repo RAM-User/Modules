@@ -19,7 +19,7 @@ public class Beetle extends Insect {
         System.out.println("k = " + k);
         System.out.println("j = " + j);
     }
-    private static int x2 = printInit("Bettle.x2 initialized");
+    private static int x2 = printInit("Beetle.x2 initialized");
 
     public static void main(String[] args) {
         System.out.println("Beetle Constructor");
