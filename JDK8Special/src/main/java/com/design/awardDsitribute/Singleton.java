@@ -27,7 +27,7 @@ class WaiMaiSingle extends AbstractStrategy implements Strategy {
     private static final WaiMaiSingle instance =  new WaiMaiSingle();
 //    private 服务service 服务service;
     private void WaiMai() {
-        register();;
+        register();
     }
     public static WaiMaiSingle getInstance() {
         return instance;
